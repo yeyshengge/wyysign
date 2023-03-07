@@ -65,7 +65,7 @@ class Task(object):
         else:
             url = api + '?do=login'
         response = requests.post(url, data=data, headers={'Content-Type':'application/x-www-form-urlencoded'}, cookies={
-            'user_session': 'kmwhZnhbF-h7GryvAXPuzFRZ7TNE2W-w97ibP9BZXl_Wk7bJ'})
+            'user_session':'kmwhZnhbF-h7GryvAXPuzFRZ7TNE2W-w97ibP9BZXl_Wk7bJ'})
         code = json.loads(response.text)['code']
         self.name = json.loads(response.text)['profile']['nickname']
         self.uid = json.loads(response.text)['account']['id']
